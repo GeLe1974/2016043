@@ -11,4 +11,4 @@
 require_once 'core/App.php';
 require_once 'core/Controller.php';
 require_once 'core/rb.php';
-R::setup('sqlite:../db.sqlite');
+R::setup('sqlite:../app/db.sqlite');

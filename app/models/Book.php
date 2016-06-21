@@ -11,9 +11,11 @@
 
 namespace model;
 
-class BookData
+class Model_Book extends \RedBean_SimpleModel
 {
     public $author;
+    public $title;
+    public $ISBN;
 
 
 }

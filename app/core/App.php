@@ -19,14 +19,14 @@ class App
      //echo'OK!';
     // print_r($this->parseUrl());
         $url = $this->parseUrl();
-        if(file_exists('../app/controllers/'. $url[0] . '.php'))
+        if(file_exists('../app/controllers/'. $url[0] . '.controller.php'))
         {
             $this->controller = $url[0];
            unset($url[0]);
 
         }
 
-        require_once '../app/controllers/' . $this->controller . '.php';
+        require_once '../app/controllers/' . $this->controller . '.controller.php';
         //echo $this->controller;
 
         $this->controller = new $this->controller;
@@ -41,11 +41,15 @@ class App
                 $this->method = $url[1];
                 unset($url[1]);
 
+            } else {
+                $this->method ='index';
             }
             $this->params = array_values($url);
 
 
             call_user_func_array([$this->controller,$this->method], $this->params);
+
+        }else{
 
         }
     }

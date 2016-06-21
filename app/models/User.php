@@ -7,8 +7,9 @@
  * Time: 15:44
  */
 
+namespace model;
 
-class User
+class Model_User extends \RedBean_SimpleModel
 {
     public $name;
     public $timestamps = false;

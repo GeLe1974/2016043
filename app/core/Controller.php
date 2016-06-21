@@ -12,9 +12,11 @@ class Controller
 
     public function model($model)
     {
+
+
         //echo $model;
         require_once '../app/models/' . $model . '.php';
-        $namespace = 'model\\'.$model;
+        $namespace = 'model\\Model_'.$model;
 
         return new $namespace();
 
