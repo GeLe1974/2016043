@@ -18,10 +18,14 @@ class Book extends Controller
         $this->data=$this->model('Book');
     }
 
-    public function index(){
+    public function
+    index(){
        //$class = get_class($this);
        //echo $class;
-        $this->view('book/index',[]);
+        //$this->view('book/index',[]);
+        //echo $this->twig()->render('home/home.twig');
+        echo 'nest';
+        $this->twig('home.twig', []);
     }
 
     public function add($title='',$author='',$ISBN='')

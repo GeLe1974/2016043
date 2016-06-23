@@ -18,12 +18,19 @@ class App
     {
      //echo'OK!';
     // print_r($this->parseUrl());
+
+        // 1 : splits url op
         $url = $this->parseUrl();
+
+        //2 : check of controller bestaat anders 'homecontroller'
         if(file_exists('../app/controllers/'. $url[0] . '.controller.php'))
         {
             $this->controller = $url[0];
            unset($url[0]);
 
+        }else{
+            $this->controller = 'home';
+            //echo 'naar home !';
         }
 
         require_once '../app/controllers/' . $this->controller . '.controller.php';
