@@ -24,12 +24,16 @@ class Book extends Controller
        //echo $class;
         //$this->view('book/index',[]);
         //echo $this->twig()->render('home/home.twig');
-        echo 'nest';
-        $this->twig('home.twig', []);
+        //echo 'nest';
+        $this->twig('home/home.twig', []);
     }
 
-    public function add($title='',$author='',$ISBN='')
+    public function add()
     {
+        if(!$_POST){
+            $this->twig('author/index.twig');
+        }
+
         $book = R::dispense('book');
         $book->title = $title;
         $book->author = $author;

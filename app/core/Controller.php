@@ -8,6 +8,8 @@
  */
 
 require __DIR__.'/../../vendor/autoload.php';
+use rock\sanitize\Sanitize;
+use rock\validate\Validate;
 
 
 class Controller

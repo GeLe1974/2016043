@@ -33,7 +33,7 @@ class Home extends Controller
             //echo "username : $user->name" ;
             //$this->view('home/index', ['name' => $user->name]);
             $this->twig('home.twig',[
-                'title' => 'hey',
+                'title' => $name,
                
             ]);
 

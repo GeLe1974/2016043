@@ -9,17 +9,9 @@
 namespace model;
 
 
-class Author extends \RedBean_SimpleModel
+class Model_Author extends \RedBean_SimpleModel
 {
     public $name;
 
-    public function __construct()
-    {
-        $this->data=$this->model('Author');
-    }
 
-    public function add($name='')
-    {
-
-    }
 }
